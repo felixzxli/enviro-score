@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>ENVIRO-EVALUALTION</title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+
+</head>
+
+<body onload="Score1()">
+
+  <!-- include for all -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success ">
+    <a class="navbar-brand" href="#">
+      <h1>
+        Enviro-Score
+      </h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <li class="nav-item active list-unstyled">
+        <a class="nav-link text-white" href="index.html">HOME <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active list-unstyled">
+        <a class="nav-link text-white" href=" game1.html">START A NEW GAME</a>
+      </li>
+      <li class="nav-item active list-unstyled">
+        <a class="nav-link text-white" href="about.html">MORE ABOUT US</a>
+      </li>
+      <li class="nav-item active list-unstyled">
+        <a class="nav-link text-warning "
+          href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/" tabindex="-1"
+          aria-disabled="false ">
+          <em>Link to the UN Sustainability Goals</em>
+        </a>
+      </li>
+      </ul>
+    </div>
+  </nav>
+  <p style="padding-left: 80px; font-weight: bold; position:fixed; font-size:30px" id="score"></p><br>
+
+  <p class="question">
+  <div style="color:red">Disclaimer: </div>
+  The scoring system is based on the overall environmental impact of your answer to the questions.
+  Impacts on climate change, biodiversity, food chain, and the overall health of the environment has been taken into
+  consideration.
+  The score is in no means scientifically proven. It should only be used as a guideline.
+  </p>
+
+  <h2 style="text-align:center">Transportation Assessment</h2>
+  <p style="text-align:center">Question 1: Which type of car do you drive?</p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Question1Gas.jpg"><br>
+  <p style="text-align:center">
+    <button onclick="ScoreButton(0,0)">
+      Gas/Diesel
+    </button>
+    <button onclick="ScoreButton(0,1)">
+      Electric
+    </button>
+    <br><br>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <p>
+            Goal 13: Take urgent action to combat climate change and its impacts:
+            Currently, greenhouse gas emissions across the world are causing the global temperature to steadily
+            increase. This has had a profound negative impact on climate, agriculture,
+            biodiversity, sea levels, and polar ice. If the increase in temperature this century exceeds 2 degrees
+            celsius, there will be catastrophic consequences for the Earth. The 2015
+            Paris Agreement aims to prevent this by having each participating country quickly and thoroughly reduce
+            their greenhouse gas emissions, which traps heat within the Earth’s
+            atmosphere, heating the planet. One such emission is carbon dioxide. Automobile emissions are responsible
+            for roughly 16% of global carbon emissions as of 2010. As a result of
+            When vehicle engines burn gas or diesel for fuel, carbon dioxide gas is produced. Driving less, especially
+            in short, walkable distances, is one of the best ways to reduce carbon
+            dioxide emissions and work towards preventing global warming and climate change. Additionally, fossil fuels
+            are non-renewable resources that are derived from crude oil within the Earth. Driving more
+            directly leads to an increased consumption in crude oil products,
+            requiring more to be extracted from the Earth. Resultantly, the limited supply of this resource decreases.
+            In addition, methods of extraction are usually damaging to local
+            ecosystems. For example, the oil tar sands in Alberta require massive local excavation, disrupting native
+            biodiversity.
+          </p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <hr>
+  </p>
+
+
+
+  <p style="text-align:center">Question 2: How many kilometers do you travel on public transport?</p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Question1Bus.jpg"><br>
+  <p style="text-align:center">kilometers annually:
+    <input type="text" id="String1">
+    <input type="submit" value="submit" onclick="ScoreTyped(1,5000,10)">
+    <br><br>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <p>
+            Goal 13: Take urgent action to combat climate change and its impacts:
+            Currently, greenhouse gas emissions across the world are causing the global temperature to steadily
+            increase. This has had a profound negative impact on climate, agriculture,
+            biodiversity, sea levels, and polar ice. If the increase in temperature this century exceeds 2 degrees
+            celsius, there will be catastrophic consequences for the Earth. The 2015
+            Paris Agreement aims to prevent this by having each participating country quickly and thoroughly reduce
+            their greenhouse gas emissions, which traps heat within the Earth’s
+            atmosphere, heating the planet. One such emission is carbon dioxide. Automobile emissions are responsible
+            for roughly 16% of global carbon emissions as of 2010. As a result of
+            When vehicle engines burn gas or diesel for fuel, carbon dioxide gas is produced. Driving less, especially
+            in short, walkable distances, is one of the best ways to reduce carbon
+            dioxide emissions and work towards preventing global warming and climate change. Additionally, fossil fuels
+            are non-renewable resources that are derived from crude oil within the Earth. Driving more
+            directly leads to an increased consumption in crude oil products,
+            requiring more to be extracted from the Earth. Resultantly, the limited supply of this resource decreases.
+            In addition, methods of extraction are usually damaging to local
+            ecosystems. For example, the oil tar sands in Alberta require massive local excavation, disrupting native
+            biodiversity.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <hr>
+  </p>
+
+  <p style="text-align:center">Question 3: How many kilometers do you drive in a private vehicle per year?</p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Question1Car.jpg"><br>
+  <p style="text-align:center">kilometers driven annually:
+    <input type="text" id="String2">
+    <input type="submit" value="submit" onclick="ScoreTyped(2,5000,20)">
+    <br><br>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+
+          <p>
+            Goal 13: Take urgent action to combat climate change and its impacts:
+            Currently, greenhouse gas emissions across the world are causing the global temperature to steadily
+            increase. This has had a profound negative impact on climate, agriculture,
+            biodiversity, sea levels, and polar ice. If the increase in temperature this century exceeds 2 degrees
+            celsius, there will be catastrophic consequences for the Earth. The 2015
+            Paris Agreement aims to prevent this by having each participating country quickly and thoroughly reduce
+            their greenhouse gas emissions, which traps heat within the Earth’s
+            atmosphere, heating the planet. One such emission is carbon dioxide. Automobile emissions are responsible
+            for roughly 16% of global carbon emissions as of 2010. As a result of
+            When vehicle engines burn gas or diesel for fuel, carbon dioxide gas is produced. Driving less, especially
+            in short, walkable distances, is one of the best ways to reduce carbon
+            dioxide emissions and work towards preventing global warming and climate change. Additionally, fossil fuels
+            are non-renewable resources that are derived from crude oil within the Earth. Driving more
+            directly leads to an increased consumption in crude oil products,
+            requiring more to be extracted from the Earth. Resultantly, the limited supply of this resource decreases.
+            In addition, methods of extraction are usually damaging to local
+            ecosystems. For example, the oil tar sands in Alberta require massive local excavation, disrupting native
+            biodiversity.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <hr>
+  </p>
+
+  <p style="text-align:center">Question 4: On average, how many kilometers do you fly each year?</p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Q2Plane.jpg"><br>
+  <p style="text-align:center">kilometers flown annually:
+    <input type="text" id="String3">
+    <input type="submit" value="submit" onclick="ScoreTyped(3,4000,20)">
+    <br><br>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Goal 13:
+            Airplanes are massive producers of carbon dioxide. In 2018, global carbon dioxide from airplanes was 905
+            millions tons. In order to halt global warming and climate change, one should avoid excessive flying.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  </p>
+
+  <h2 style="text-align:center">Dietary Assessment</h2>
+  <p style="text-align:center">Question 5: How many times do you eat red meat per week?</p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Q3Meat.png"><br>
+  <p style="text-align:center">Times eaten:
+    <input type="text" id="String4">
+    <input type="submit" value="submit" onclick="ScoreTyped(4,4,3)">
+    <br><br>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal5">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Goal 13:
+            A large proportion of greenhouse gas emissions comes from food production, especially meat and dairy that
+            are associated with much higher carbon and methane emissions, alongside a higher water and energy
+            consumption rate than plant-based food. Red meat in particular is much less efficient to produce than
+            chicken. Consequently, the greenhouse gases from livestock contribute to global warming.
+
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  </p>
+
+  <p style="text-align:center">Question 6: How often do you spend on food from restaurants and takeout per week?</p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Q4Restaurant.jpg"><br>
+  <p style="text-align:center">Number of times:
+    <input type="text" id="String5">
+    <input type="submit" value="submit" onclick="ScoreTyped(5,2,3)">
+    <br><br>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal6">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Goal 13: Food bought in restaurants has a wider footprint than food you buy to cook at home because of the
+            emissions
+            associated with heating, lighting, and cooking for your meal. Food from takeout had additional packaging and
+            additional transportation emissions associated with delivery.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  </p>
+
+  <h2 style="text-align:center">Consumerism Habits Assessment</h2>
+  <p style="text-align:center">Question 7: Apart from essential goods like groceries, how many times do you go shopping
+    per
+    month?</p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Q5Shopping.jpg"><br>
+  <p style="text-align:center">Number of times:
+    <input type="text" id="String6">
+    <input type="submit" value="submit" onclick="ScoreTyped(6,1,5)">
+    <br><br>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal7">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <p>
+            Goal 13,14,15:
+            Consumerism is perhaps one of the most impactful lifestyle choices on the environment. First off, buying new
+            products uses up the finite resources on and within the Earth. Additionally, energy and land must be
+            dedicated for the production of consumer goods. Various stages of the supply chain produce carbon emissions
+            and waste, such as transportation and packaging for example. If consumers tend to discard and purchase
+            products frequently because of poor habits or the product is disposable in nature, then waste in landfills
+            can increase significantly. The more land and resources taken away for production, the greater the strain on
+            biodiversity and the ecosystem. Sustainable consumer habits are essential to reduce waste, greenhouse gas
+            emissions, overuse of natural resources, and the destruction of ecosystems.
+
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  </p>
+
+  <p style="text-align:center">Question 8: On average, how often do you buy local produced food per month?</p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Q6Farm.jpg"><br>
+  <p style="text-align:center">Number of times:
+    <input type="text" id="String7">
+    <input type="submit" value="submit" onclick="ScoreTyped(7,1,4)">
+    <br><br>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal8">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Goal 13: Buying local produced food can generally result in a lower carbon footprint. Importing, whether via
+            air, sea or road, all release massive amounts of greenhouse gases. It all depends on how it’s produced and
+            packaged, but it is more likely to have a lower environmental footprint. Food grown in local farms is very
+            sustainable and it can be vital for developing countries.
+
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  </p>
+
+  <p style="text-align:center">Question 9: Do you use reusable shopping bags?</p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Q7Bags.jpg"><br>
+  <p style="text-align:center">
+    <button onclick="ScoreButton(8,0)">
+      Yes
+    </button>
+    <button onclick="ScoreButton(8,2)">
+      No
+    </button>
+    <br><br>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal9">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Goal 14, 15: Making plastic bags requires the burning of fossil fuel, cutting down of trees, and in some
+            cases, the use
+            of unfair labour practices. Reusable bags save both plants and animals, and help cut down on the emission of
+            dangerous greenhouse gases.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  </p>
+
+  <p style="text-align:center">Question 10: Do you use reusable water bottles?</p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Q8Bottle.jpg"><br>
+  <p style="text-align:center">
+    <button onclick="ScoreButton(9,0)">
+      Yes
+    </button>
+    <button onclick="ScoreButton(9,1)">
+      No
+    </button>
+    <br><br>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal10">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Goal 13, Goal 15: Using plastic single use water bottles are detrimental to the environment in both the
+            production process and the disposal process. In the production process, fossil fuels, a nonrenewable form of
+            energy, is used to produce plastic. In the disposal process, these plastic bottles often take thousands of
+            years to decompose and leave microplastics that can enter food chains. This is especially present in the
+            ocean and has proven to be deadly to the aquatic ecosystem. Using reusable water bottles eliminates the
+            issue of production and disposal of plastic.
+
+
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  </p>
+
+  <p style="text-align:center">Question 11: On a scale of 1 - 4, how intricate is the recycling system in your
+    municipality? (1
+    being no sorting, 4 being extremely specific sorting)</p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Q9Recycling.jpg"><br>
+  <p style="text-align:center">
+    <button onclick="ScoreButton(10,3)">
+      1
+    </button>
+    <button onclick="ScoreButton(10,2)">
+      2
+    </button>
+    <button onclick="ScoreButton(10,1)">
+      3
+    </button>
+    <button onclick="ScoreButton(10,0)">
+      4
+    </button>
+    <br><br>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal11">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal11" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Goal 14, 15:
+          Proper waste management techniques prevent harmful substances from entering the food chain. The substances are
+          not much to the lower level organisms, but to the upper organisms, the consequence is exponentially larger.
+          This affects both life on land and life in water since waste can travel with wind and water.
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  </p>
+
+  <p style="text-align:center">Question 12: How long are your average showers in minutes? </p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Q12Shower.jpg"><br>
+  <p style="text-align:center">Length of shower:
+    <input type="text" id="String11">
+    <input type="submit" value="submit" onclick="ScoreTyped(11,4,5)">
+    <br><br>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal12">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal12" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Goal 13:
+          With clean drinking water still not readily available to everybody on Earth, long showers and full baths are a
+          significant waste of water. In an average shower, 10 liters of water is used per minute, and an average human
+          only drinks 3 liters. This means that an extra minute of shower can help three more people live without the
+          fear of waterborne diseases or dehydration. Water purification plants also consume lots of energy, both
+          renewable and nonrenewable, and release chemicals and greenhouse gases in the process.
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  </p>
+
+  <p style="text-align:center">Question 13: On average, how many times do you take a bath (fill the bathtub) per week?
+  </p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Q13Bath.jpg"><br>
+  <p style="text-align:center">Number of times:
+    <input type="text" id="String12">
+    <input type="submit" value="submit" onclick="ScoreTyped(12,1,7)">
+    <br><br>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal13">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal13" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Goal 13:
+          With clean drinking water still not readily available to everybody on Earth, long showers and full baths are a
+          significant waste of water. In an average shower, 10 liters of water is used per minute, and an average human
+          only drinks 3 liters. This means that an extra minute of shower can help three more people live without the
+          fear of waterborne diseases or dehydration. Water purification plants also consume lots of energy, both
+          renewable and nonrenewable, and release chemicals and greenhouse gases in the process.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  </p>
+
+  <p style="text-align:center">Question 14: Do you regularly turn off your lights and appliances (instead of leaving
+    them on)?
+  </p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Q14Lights.jpg"><br>
+  <p style="text-align:center">
+    <button onclick="ScoreButton(13,0)">
+      Yes
+    </button>
+    <button onclick="ScoreButton(13,1)">
+      No
+    </button>
+    <br><br>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal14">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal14" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Goal 12, Goal 13: 19 million UK homes have poor levels of energy efficiency. Lighting can account for up to
+          15% of your home electricity bill, so you can turn off the lights when you don’t need them to reduce
+          electricity usage. Also, don’t leave the devices on standby because some of them consume quite a lot of
+          energy, which increases the carbon footprint. Although many power plants are switching away from coal and
+          moving towards nuclear and renewable, there are still a considerable amount of coal power plants around the
+          world that release tons of carbon dioxide and other waste into the atmosphere.
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  </p>
+
+  <p style="text-align:center">Question 15: Do you use LED lights at home?
+  </p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Q15LED.jpg"><br>
+  <p style="text-align:center">
+    <button onclick="ScoreButton(14,0)">
+      All
+    </button>
+    <button onclick="ScoreButton(14,1)">
+      Some
+    </button>
+    <button onclick="ScoreButton(14,2)">
+      None
+    </button>
+    <br><br>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal15">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal15" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Goal 13: By making your home more efficient (i.e. finding ways to waste less energy) you can reduce your
+            carbon footprint. LEDs use much less energy than incandescent bulbs because diode light is much more
+            efficient, power-wise, than filament light. LED lights use more than 75% less energy than incandescent
+            lights. A bright LED bulb uses only 11 to 12 watts while creating a light output comparable to a 50-watt
+            incandescent bulb.
+          </p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  </p>
+
+  <p style="text-align:center">Question 16: How many new electronic devices did you buy In the last 12 months (for
+    example: mobile phones, TV, laptop, PC)?
+  </p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Q16Electronic.jpg"><br>
+  <p style="text-align:center">Number of new devices:
+    <input type="text" id="String15">
+    <input type="submit" value="submit" onclick="ScoreTyped(15,1,9)">
+    <br><br>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal16">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal16" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Goal 13: The production process for new electronic devices (even ‘efficient’ appliances) requires massive
+            amounts of energy and resources. Reusing old ones also diverts waste from landfill. E-waste can be produced
+            for manufacturing the electronic devices, which pollutes the environment by creating lots of carbon
+            emissions.
+          </p>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  </p>
+
+  <p style="text-align:center">Question 17: How do you get rid of old electronics (including phones, laptops, batteries,
+    lightbulbs, etc.)
+  </p>
+  <img style="display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;" src="Q17EWaste.jpg"><br>
+  <p style="text-align:center">
+    <button onclick="ScoreButton(16,0)">
+      Trade-in
+    </button>
+    <button onclick="ScoreButton(16,2)">
+      Proper e-waste recycler
+    </button>
+    <button onclick="ScoreButton(16,4)">
+      Garbage bin
+    </button>
+    <br><br>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal17">
+      View Details
+    </button>
+
+    <!-- Modal -->
+  <div class="modal fade" id="exampleModal17" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Explanation</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Goal 13, Goal 14, Goal 15: There are valuable materials that are polluting in the extraction process from
+          Earth. Ranging from gold in connectors to lithium in batteries, these rare Earth metals are often
+          nonrenewable. Proper e-waste processes can not only decrease the amount of new materials extracted from the
+          earth by reusing the old, but also decrease pollution from improper disposal. Mercury is an especially
+          damaging pollutant. When leaked to lakes, it can kill entire populations of water organisms.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  </p>
+
+  <br><br><br>
+
+  <p style="text-align:center" style="font-weight: bold">
+    Hit the button below for a detailed report of your responses.
+    <br><br>
+    <img style="width:10%" src="Download.png" onclick="Download()">
+  </p>
+
+  <script src="app.js"></script>
+  <script src="game.js"></script>
+  <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
+
+</html>

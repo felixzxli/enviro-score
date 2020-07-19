@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Enviro-Score</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="http://cdn.jsdelivr.net/g/filesaver.js"></script>
+
+</head>
+
+<body onload="Date1()">
+
+  <!-- include for all -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success ">
+    <a class="navbar-brand" href="#">
+      <h1>
+        Enviro-Score
+      </h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <li class="nav-item active list-unstyled">
+        <a class="nav-link text-white" href="index.html">HOME <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active list-unstyled">
+        <a class="nav-link text-white" href="game1.html">START A NEW GAME</a>
+      </li>
+      <li class="nav-item active list-unstyled">
+        <a class="nav-link text-white" href="about.html">MORE ABOUT US</a>
+      </li>
+      <li class="nav-item active list-unstyled">
+        <a class="nav-link text-warning "
+          href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/" tabindex="-1"
+          aria-disabled="false ">
+          <em>Link to the UN Sustainability Goals</em>
+        </a>
+      </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-light">
+    <div class="col-md-5 p-lg-3 mx-auto my-5">
+      <h3 class="display-3 font-weight-normal">
+        <p>Welcome to <em>Enviro-Score</em></p>
+      </h3>
+      <p class="lead font-weight-normal">FIND OUT THE SUSTAINABILITY OF YOUR DAILY LIFESTYLE HABITS AND RECEIVE A
+        PERSONAL GRADE OF ENVIRONMENTALY-FRIENDLINESS (0-100%)</p>
+      <!-- 
+      <div class="btn-group-vertical">
+
+      </div> -->
+
+      <div class="btn-group" role="group" aria-label="...">
+        <a class="btn btn-success mr-2" href="about.html">More About Us</a>
+        <a class="btn btn-success mr-2" href="game1.html">Start a new game: Find out more about your enviro-impact
+          now</a>
+      </div>
+
+
+    </div>
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+
+  <div class="pricing-header px-3 py-3 pt-10 mb-10 pb-10 mt-10 text-center bg-success">
+    <p class="lead">
+    <h5 class="font-weight-bold text-white" id="date"></h5>
+    <h6 class="font-italic text-white" id="Countdown"></h6>
+  </div>
+
+  <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-light">
+
+    <h2 class="font-italic font-weight-bold">What Is Our Goal?</h2> <br>
+    <h5 class="text-break px-5">
+
+      As a result of increased global warming and climate change, us humans and the Earth we live on are facing gradual
+      changes that could lead to
+      natural catastrophies and calamities if we continue our unsustainable production, consumption, and pollution. In
+      order to protect our planet and all the organisms that live on it, the
+      United Nations declared specific
+      goals that we all should work towards solving. These are known as the
+      <a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/" class="text-success">United
+        Nations Sustainable
+        Development Goals</a>The goal of <em>Enviro-Score</em> is to educate the public so we can all contribute towards
+      these goals.
+
+    </h5>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="E_SDGgoals_icons-individual-rgb-13.png" class="img-thumbnail">
+        <div class="card-body">
+          <h4 class="card-text"> <a href="https://www.un.org/sustainabledevelopment/climate-change/"
+              class="text-success">Goal 13: Take
+              urgent action to combat climate change and its impacts</a></h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="e_print_14.jpg" class="img-thumbnail">
+        <div class="card-body">
+          <h4 class="card-text"> <a href="https://www.un.org/sustainabledevelopment/oceans/" class="text-success">
+              Goal 14: Conserve and sustainably use the oceans, seas and marine resources
+            </a></h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card mb-4 shadow-sm">
+        <img src="sdg-15.png" class="img-thumbnail">
+        <div class="card-body">
+          <h4 class="card-text"> <a href="https://www.un.org/sustainabledevelopment/biodiversity/"
+              class="text-success">Goal 15:
+              Sustainably manage forests, combat desertification, halt and reverse land degradation, halt biodiversity
+              loss
+            </a></h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- include for all -->
+    <footer class="footer mt-auto py-3 px-3">
+      <div class="container">
+        <span class="text-muted">
+          <p>
+            This project was created by FL, PL, and SZ while participating in <a href="https://sethacks.ca/#/"
+              class="text-success">SetHacks()</a>.
+          </p>
+        </span>
+      </div>
+
+    </footer>
+
+
+
+    <script src="app.js"></script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+
+
+</body>
+
+</html>
